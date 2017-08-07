@@ -30,7 +30,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:converter_adapter_ibm4704-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -57,18 +57,17 @@ F 3 "" H 1700 2150 60  0000 C CNN
 $EndComp
 Text Notes 8750 1450 0    60   ~ 0
 Dsub 9P connector
-NoConn ~ 8750 2200
+NoConn ~ 8750 2500
 NoConn ~ 8750 2300
 NoConn ~ 8750 2400
 Text Label 2400 2425 0    60   ~ 0
-GND
+DIN8
 Text Label 2400 2275 0    60   ~ 0
-VCC
+DIN6
 Text Label 2400 2200 0    60   ~ 0
-D1
+DIN5
 Text Label 2400 2050 0    60   ~ 0
-D0
-NoConn ~ 2300 1900
+DIN3
 NoConn ~ 2300 1975
 NoConn ~ 2300 2125
 NoConn ~ 2300 2350
@@ -89,13 +88,13 @@ Wire Wire Line
 Wire Wire Line
 	4900 2350 4525 2350
 Text Label 4525 1750 0    60   ~ 0
-GND
+DIN8
 Text Label 4525 1950 0    60   ~ 0
-VCC
+DIN6
 Text Label 4525 2150 0    60   ~ 0
-D0
+DIN3
 Text Label 4525 2350 0    60   ~ 0
-D1
+DIN5
 $Comp
 L GND #PWR01
 U 1 1 57123B4D
@@ -227,73 +226,169 @@ Text Label 5250 2150 0    60   ~ 0
 DS_4
 Text Label 5250 2350 0    60   ~ 0
 DS_5
-Text Notes 4900 1500 0    60   ~ 0
-IBM4704
+Text Notes 4725 1525 0    60   ~ 0
+IBM4704(ADB)
 Wire Wire Line
-	6600 1750 6225 1750
+	4875 3500 4500 3500
 Wire Wire Line
-	6600 1950 6225 1950
+	4875 3700 4500 3700
 Wire Wire Line
-	6600 2150 6225 2150
-Text Label 6225 1750 0    60   ~ 0
-VCC
-Text Label 6225 1950 0    60   ~ 0
-D0
-Text Label 6225 2150 0    60   ~ 0
-GND
+	4875 3900 4500 3900
+Text Label 4500 3500 0    60   ~ 0
+DIN1
+Text Label 4500 3700 0    60   ~ 0
+DIN3
+Text Label 4500 3900 0    60   ~ 0
+DIN8
 $Comp
 L SOLDER_JUMPER SJ5
 U 1 1 57124DB6
-P 6700 1800
-F 0 "SJ5" H 6700 1750 60  0000 C CNN
-F 1 "SOLDER_JUMPER" H 6750 1950 60  0001 C CNN
-F 2 "keyboard_parts:SOLDER_JUMPER_2" H 6750 1800 60  0001 C CNN
-F 3 "" H 6750 1800 60  0000 C CNN
-	1    6700 1800
+P 4975 3550
+F 0 "SJ5" H 4975 3500 60  0000 C CNN
+F 1 "SOLDER_JUMPER" H 5025 3700 60  0001 C CNN
+F 2 "keyboard_parts:SOLDER_JUMPER_2" H 5025 3550 60  0001 C CNN
+F 3 "" H 5025 3550 60  0000 C CNN
+	1    4975 3550
 	1    0    0    -1  
 $EndComp
 $Comp
 L SOLDER_JUMPER SJ6
 U 1 1 57124DBC
-P 6700 2000
-F 0 "SJ6" H 6700 1950 60  0000 C CNN
-F 1 "SOLDER_JUMPER" H 6750 2150 60  0001 C CNN
-F 2 "keyboard_parts:SOLDER_JUMPER_2" H 6750 2000 60  0001 C CNN
-F 3 "" H 6750 2000 60  0000 C CNN
-	1    6700 2000
+P 4975 3750
+F 0 "SJ6" H 4975 3700 60  0000 C CNN
+F 1 "SOLDER_JUMPER" H 5025 3900 60  0001 C CNN
+F 2 "keyboard_parts:SOLDER_JUMPER_2" H 5025 3750 60  0001 C CNN
+F 3 "" H 5025 3750 60  0000 C CNN
+	1    4975 3750
 	1    0    0    -1  
 $EndComp
 $Comp
 L SOLDER_JUMPER SJ7
 U 1 1 57124DC2
-P 6700 2200
-F 0 "SJ7" H 6700 2150 60  0000 C CNN
-F 1 "SOLDER_JUMPER" H 6750 2350 60  0001 C CNN
-F 2 "keyboard_parts:SOLDER_JUMPER_2" H 6750 2200 60  0001 C CNN
-F 3 "" H 6750 2200 60  0000 C CNN
-	1    6700 2200
+P 4975 3950
+F 0 "SJ7" H 4975 3900 60  0000 C CNN
+F 1 "SOLDER_JUMPER" H 5025 4100 60  0001 C CNN
+F 2 "keyboard_parts:SOLDER_JUMPER_2" H 5025 3950 60  0001 C CNN
+F 3 "" H 5025 3950 60  0000 C CNN
+	1    4975 3950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6850 1750 7175 1750
+	5125 3500 5450 3500
 Wire Wire Line
-	6850 1950 7175 1950
+	5125 3700 5450 3700
 Wire Wire Line
-	6850 2150 7175 2150
-Text Label 6950 1750 0    60   ~ 0
+	5125 3900 5450 3900
+Text Label 5225 3500 0    60   ~ 0
 DS_1
-Text Label 6950 1950 0    60   ~ 0
+Text Label 5225 3700 0    60   ~ 0
 DS_3
-Text Label 6950 2150 0    60   ~ 0
-DS_9
-Text Notes 6500 1475 0    60   ~ 0
-Sony NEWS
+Text Label 5225 3900 0    60   ~ 0
+DS_5
+Text Notes 4425 3275 0    60   ~ 0
+Sony NEWS(X68K+PS/2)
 Wire Wire Line
 	8750 1700 8475 1700
 Text Label 8475 1700 0    60   ~ 0
 DS_1
 Wire Wire Line
-	8750 2500 8475 2500
-Text Label 8475 2500 0    60   ~ 0
-DS_9
+	8750 2200 8475 2200
+Text Label 8475 2200 0    60   ~ 0
+DS_6
+Wire Wire Line
+	4875 4100 4500 4100
+Text Label 4500 4100 0    60   ~ 0
+DIN6
+$Comp
+L SOLDER_JUMPER SJ8
+U 1 1 598731D2
+P 4975 4150
+F 0 "SJ8" H 4975 4100 60  0000 C CNN
+F 1 "SOLDER_JUMPER" H 5025 4300 60  0001 C CNN
+F 2 "keyboard_parts:SOLDER_JUMPER_2" H 5025 4150 60  0001 C CNN
+F 3 "" H 5025 4150 60  0000 C CNN
+	1    4975 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5125 4100 5450 4100
+Text Label 5225 4100 0    60   ~ 0
+DS_2
+Wire Wire Line
+	4875 4300 4500 4300
+Text Label 4500 4300 0    60   ~ 0
+DIN5
+$Comp
+L SOLDER_JUMPER SJ9
+U 1 1 5987328D
+P 4975 4350
+F 0 "SJ9" H 4975 4300 60  0000 C CNN
+F 1 "SOLDER_JUMPER" H 5025 4500 60  0001 C CNN
+F 2 "keyboard_parts:SOLDER_JUMPER_2" H 5025 4350 60  0001 C CNN
+F 3 "" H 5025 4350 60  0000 C CNN
+	1    4975 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5125 4300 5450 4300
+Text Label 5225 4300 0    60   ~ 0
+DS_6
+Wire Wire Line
+	2300 1900 2575 1900
+Text Label 2400 1900 0    60   ~ 0
+DIN1
+Text Notes 5575 3500 0    60   ~ 0
+VCC
+Text Notes 5575 3700 0    60   ~ 0
+Data\n
+Text Notes 5575 3900 0    60   ~ 0
+GND
+Text Notes 5600 4300 0    60   ~ 0
+Command
+Text Notes 5600 4100 0    60   ~ 0
+BZ
+Text Notes 5600 1950 0    60   ~ 0
+VCC
+Text Notes 5600 1750 0    60   ~ 0
+GND
+Text Notes 5600 2150 0    60   ~ 0
+Data
+Text Notes 5600 2350 0    60   ~ 0
+Clock
+Text Notes 4325 2150 0    60   ~ 0
+D0
+Text Notes 4325 2350 0    60   ~ 0
+D1
+Text Notes 4325 4100 0    60   ~ 0
+D1
+Text Notes 4325 3700 0    60   ~ 0
+D2
+Text Notes 4325 4300 0    60   ~ 0
+D3
+Text Notes 4025 3500 0    60   ~ 0
+X68K
+Text Notes 4025 3700 0    60   ~ 0
+X68K
+Text Notes 4025 4300 0    60   ~ 0
+X68K
+Text Notes 4025 3900 0    60   ~ 0
+X68K
+Text Notes 4025 4100 0    60   ~ 0
+PS/2
+Text Notes 4300 3500 0    60   ~ 0
+VCC
+Text Notes 4300 3900 0    60   ~ 0
+GND
+Text Notes 4300 1750 0    60   ~ 0
+GND
+Text Notes 4300 1950 0    60   ~ 0
+VCC
+Text Notes 4075 1750 0    60   ~ 0
+ADB
+Text Notes 4075 1950 0    60   ~ 0
+ADB
+Text Notes 4075 2150 0    60   ~ 0
+ADB
+Text Notes 4075 2350 0    60   ~ 0
+ADB
 $EndSCHEMATC

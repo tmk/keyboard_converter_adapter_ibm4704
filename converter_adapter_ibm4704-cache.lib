@@ -3,16 +3,16 @@ EESchema-LIBRARY Version 2.3
 #
 # CONN_01X10
 #
-DEF CONN_01X10 P 0 40 Y N 1 F N
-F0 "P" 0 550 50 H V C CNN
+DEF CONN_01X10 J 0 40 Y N 1 F N
+F0 "J" 0 550 50 H V C CNN
 F1 "CONN_01X10" 100 0 50 V V C CNN
-F2 "" 0 0 60 H V C CNN
-F3 "" 0 0 60 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
 $FPLIST
- Pin_Header_Straight_1X10
- Pin_Header_Angled_1X10
- Socket_Strip_Straight_1X10
- Socket_Strip_Angled_1X10
+ Pin_Header_Straight_1X*
+ Pin_Header_Angled_1X*
+ Socket_Strip_Straight_1X*
+ Socket_Strip_Angled_1X*
 $ENDFPLIST
 DRAW
 S -50 -445 10 -455 0 1 0 N
@@ -44,10 +44,10 @@ ENDDEF
 DEF GND #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -250 50 H I C CNN
 F1 "GND" 0 -150 50 H V C CNN
-F2 "" 0 0 60 H V C CNN
-F3 "" 0 0 60 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
 DRAW
-P 6 0 1 0  0 0  0 -50  50 -50  0 -100  -50 -50  0 -50 N
+P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
 X GND 1 0 0 0 D 50 50 1 1 W N
 ENDDRAW
 ENDDEF
@@ -60,14 +60,14 @@ F1 "MINI_DIN_8P_JACK" 25 375 60 H V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
-T 0 75 -175 60 0 0 0 1  Normal 0 C C
-T 0 -75 -175 60 0 0 0 2  Normal 0 C C
-T 0 200 0 60 0 0 0 3  Normal 0 C C
-T 0 50 0 60 0 0 0 4  Normal 0 C C
-T 0 -200 0 60 0 0 0 5  Normal 0 C C
-T 0 150 175 60 0 0 0 6  Normal 0 C C
-T 0 0 175 60 0 0 0 7  Normal 0 C C
-T 0 -150 175 60 0 0 0 8  Normal 0 C C
+T 0 75 -175 60 0 0 0 1 Normal 0 C C
+T 0 -75 -175 60 0 0 0 2 Normal 0 C C
+T 0 200 0 60 0 0 0 3 Normal 0 C C
+T 0 50 0 60 0 0 0 4 Normal 0 C C
+T 0 -200 0 60 0 0 0 5 Normal 0 C C
+T 0 150 175 60 0 0 0 6 Normal 0 C C
+T 0 0 175 60 0 0 0 7 Normal 0 C C
+T 0 -150 175 60 0 0 0 8 Normal 0 C C
 C -200 0 50 0 1 0 N
 C -150 175 50 0 1 0 N
 C -75 -175 50 0 1 0 N
@@ -93,13 +93,13 @@ ENDDEF
 # PWR_FLAG
 #
 DEF PWR_FLAG #FLG 0 0 N N 1 F P
-F0 "#FLG" 0 95 50 H I C CNN
-F1 "PWR_FLAG" 0 180 50 H V C CNN
-F2 "" 0 0 60 H V C CNN
-F3 "" 0 0 60 H V C CNN
+F0 "#FLG" 0 75 50 H I C CNN
+F1 "PWR_FLAG" 0 150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
 DRAW
-X pwr 1 0 0 0 U 20 20 0 0 w
-P 6 0 1 0  0 0  0 50  -75 100  0 150  75 100  0 50 N
+X pwr 1 0 0 0 U 50 50 0 0 w
+P 6 0 1 0 0 0 0 50 -40 75 0 100 40 75 0 50 N
 ENDDRAW
 ENDDEF
 #
